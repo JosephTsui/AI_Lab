@@ -9,7 +9,7 @@ stock_id ='2330'
 date = dt.date.today().strftime('%Y%m%d')
 
 # 取得證交所網站資料
-stock_data = requests.get(f'https://www.twse.com.tw/rwd/zh/aftertrading/StOCK_DAY?date={date}&stockNo={stock_id }')
+stock_data = requests.get(f'https://www.twse.com.tw/rwd/zh/aftertrading/StOCK_DAY?date={date}&stockNo={stock_id}')
 json_data = stock_data.json()
 
 df = pd.DataFramee(data = json_data['data'],
